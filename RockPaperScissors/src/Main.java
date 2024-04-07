@@ -44,7 +44,11 @@ public class Main {
         // sets a move for player 2
         String player2 = createRandomChoice();
 
+        // stores the winner for the match
+        String winnerOfRound = declareWinner(player1,player2);
+
         System.out.println("Player 1 chooses " + player1);
         System.out.println("Player 2 chooses " + player2);
+        System.out.println(winnerOfRound);
     }
 }
