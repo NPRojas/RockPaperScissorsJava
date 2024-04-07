@@ -1,4 +1,5 @@
-import java.util.Objects;
+import java.util.Locale;
+import java.util.Scanner;
 
 public class Main {
     public static String createRandomChoice() {
@@ -21,6 +22,15 @@ public class Main {
         return move;
     }
 
+    public static String getUserMove () {
+        // Declare the scanner
+        Scanner reader = new Scanner(System.in);
+        //Prompt the user to enter move
+        System.out.println("Pick your move: rock, paper, or scissors?");
+        // Gets user input
+        return reader.next().toLowerCase();
+    }
+
     public static String declareWinner(String player1, String player2) {
         String winner;
 
@@ -39,8 +49,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        // sets a move for player 1
-        String player1 = createRandomChoice();
+        // waits for input for player 1
+        String player1 = getUserMove();
         // sets a move for player 2
         String player2 = createRandomChoice();
 
